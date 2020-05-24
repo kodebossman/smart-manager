@@ -16,4 +16,5 @@ public interface FarmerRepository extends JpaRepository<Farmer, Long> {
 
     List<Farmer> findByFirstNameAndLastName(String firstName, String lastName);
 
+
 }

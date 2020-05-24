@@ -2,6 +2,8 @@ package com.bayah.smartmanager.farm;
 
 import com.bayah.smartmanager.common.BaseEntity;
 import com.bayah.smartmanager.farmer.Farmer;
+import com.bayah.smartmanager.project.Project;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 
@@ -18,12 +20,17 @@ public class Farm extends BaseEntity {
     @Column(name = "farm_size", nullable = false, length = 45)
     private String farmSize;
 
-    @Column(name = "farm_province", nullable = false, length = 45)
-    private String province;
+  @Column(name = "farm_province", nullable = false, length = 45)
+  private String province;
 
-    @Column(name = "farm_district", nullable = false, length = 45)
-    private String district;
+  @Column(name = "farm_district", nullable = false, length = 45)
+  private String district;
 
-    @Column(name = "farm_location", length = 45)
-    private String location;
+  @Column(name = "farm_location", length = 45)
+  private String location;
+
+  @ManyToOne(fetch = FetchType.LAZY, optional = true)
+  @JoinColumn(name = "farmers_id", nullable = false)
+  @JsonIgnore
+  private Farmer farmer;
 }

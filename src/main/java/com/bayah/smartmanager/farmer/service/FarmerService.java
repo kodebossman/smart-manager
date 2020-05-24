@@ -8,22 +8,24 @@ import java.util.Optional;
 
 public interface FarmerService {
 
-    Farmer register(Farmer farmer);
+  Farmer register(Farmer farmer);
 
-    Optional<Farmer> findByMsisdn(String msisdn);
+  Optional<Farmer> findByMsisdn(String msisdn);
 
-    List<Farmer> findByLastName(String lastName);
+  Optional<Farmer> findById(Long id);
 
-    List<Farmer> findByFirstName(String firstName);
+  List<Farmer> findByLastName(String lastName);
 
-    List<Farmer> findByFirstNameAndLastName(String firstName, String lastName);
+  List<Farmer> findByFirstName(String firstName);
 
-    Long total();
+  List<Farmer> findByFirstNameAndLastName(String firstName, String lastName);
 
-    Farmer update(Farmer farmer);
+  Long total();
 
-    Farmer findAll(Pageable pageable);
+  Farmer update(Farmer farmer);
 
+
+  List<Farmer> findAll(Pageable pageable);
 
 
 }
