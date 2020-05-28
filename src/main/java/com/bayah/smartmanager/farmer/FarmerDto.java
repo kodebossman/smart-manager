@@ -13,7 +13,7 @@ public class FarmerDto extends BaseDto implements Serializable {
   private String firstName;
   private String lastName;
   private String idNumber;
-  private DistrictDto district;
+  private DistrictDto districtDto;
   private String latitude;
   private String longitude;
   private String village;

@@ -2,6 +2,7 @@ package com.bayah.smartmanager.location;
 
 
 import com.bayah.smartmanager.common.BaseEntity;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
@@ -26,7 +27,9 @@ public class District extends BaseEntity {
   @Column
   private int totalWards;
 
-  @ManyToOne
+  @ManyToOne(fetch = FetchType.LAZY, optional = false)
+  @JoinColumn(name = "province_id", nullable = false)
+  @JsonIgnore
   private Province province;
 
 }

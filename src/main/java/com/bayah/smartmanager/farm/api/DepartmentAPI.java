@@ -8,8 +8,6 @@ import com.bayah.smartmanager.exception.BusinessException;
 import com.bayah.smartmanager.farm.Department;
 import com.bayah.smartmanager.farm.DepartmentDto;
 import com.bayah.smartmanager.farm.service.DepartmentService;
-import com.bayah.smartmanager.farmer.Farmer;
-import com.bayah.smartmanager.farmer.FarmerDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.PageRequest;

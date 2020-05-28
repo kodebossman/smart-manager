@@ -31,15 +31,18 @@ public class Farmer extends BaseEntity {
     @Column(name="msisdn", unique = true, nullable = false, length = 12)
     private String msisdn;
 
-    @Column(name="location", length = 45)
-    private String location;
+    @Column(name="latitude", length = 45)
+    private String latitude;
 
-    @Column(name = "province", nullable = false, length = 45)
-    private String province;
+    @Column(name="longitude", length = 45)
+    private String longitude;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "district_id", nullable = false)
     @JsonIgnore
     private District district;
+
+    @Column(name="village", length = 45)
+    private String village;
 
 }
