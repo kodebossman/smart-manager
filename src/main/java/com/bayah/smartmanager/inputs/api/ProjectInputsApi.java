@@ -26,7 +26,7 @@ import java.util.stream.Collectors;
 @Slf4j
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/projectInputs")
+@RequestMapping("/inputs")
 public class ProjectInputsApi implements CrudApi<ProjectInputsDto> {
 
 
