@@ -12,10 +12,5 @@ public class ManagerDto extends BaseEntity implements Serializable {
     private String firstName;
     private String lastName;
     private String idNumber;
-    private String contactNumber;
-    private String location;
-    private String province;
-    private String district;
-
-
+    private String msisdn;
 }

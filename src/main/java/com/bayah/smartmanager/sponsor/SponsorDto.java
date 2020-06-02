@@ -13,7 +13,7 @@ public class SponsorDto extends BaseDto implements Serializable {
     private String firstName;
     private String lastName;
     private String idNumber;
-    private String contactNumber;
+    private String msisdn;
     private SponsorType sponsorType;
     private String organization;
 

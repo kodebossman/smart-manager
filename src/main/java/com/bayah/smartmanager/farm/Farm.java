@@ -4,11 +4,20 @@ import com.bayah.smartmanager.common.BaseEntity;
 import com.bayah.smartmanager.farmer.Farmer;
 import com.bayah.smartmanager.project.Project;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "farms")
+@Table(name = "farms", indexes = {@Index(name = "indx_farm", columnList = "id", unique = true)})
+@Getter
+@Setter
+@ToString
+@Access(AccessType.FIELD)
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Farm extends BaseEntity {
 
     @Column(name = "farm_name", nullable = false, length = 45)

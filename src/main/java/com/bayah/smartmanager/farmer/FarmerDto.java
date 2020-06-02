@@ -1,6 +1,7 @@
 package com.bayah.smartmanager.farmer;
 
 import com.bayah.smartmanager.common.BaseDto;
+import com.bayah.smartmanager.location.District;
 import com.bayah.smartmanager.location.DistrictDto;
 import lombok.Data;
 
@@ -13,7 +14,7 @@ public class FarmerDto extends BaseDto implements Serializable {
   private String firstName;
   private String lastName;
   private String idNumber;
-  private DistrictDto district;
+  private District district;
   private String latitude;
   private String longitude;
   private String village;

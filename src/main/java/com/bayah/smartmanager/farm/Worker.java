@@ -12,7 +12,7 @@ import lombok.ToString;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "workers", indexes = {@Index(name = "indx_workers", columnList = "msisdn", unique = true)})
+@Table(name = "workers", indexes = {@Index(name = "indx_worker", columnList = "msisdn", unique = true)})
 @Getter
 @Setter
 @ToString
@@ -40,8 +40,10 @@ public class Worker extends BaseEntity {
     @Column(name = "village", nullable = false, length = 45)
     private String village;
 
-    @Column(name = "department", nullable = false, length = 45)
-    private String department;
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "dept_id", nullable = false)
+    @JsonIgnore
+    private Department department;
 
     @Column(name = "supervisor", nullable = false, length = 45)
     private String supervisor;

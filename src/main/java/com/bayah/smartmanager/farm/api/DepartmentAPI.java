@@ -45,7 +45,7 @@ public class DepartmentAPI implements CrudApi<DepartmentDto> {
 
     @Override
     public ApiResponse<DepartmentDto> update(DepartmentDto departmentDto) {
-        log.info("Update Existing Farmer : {} ", departmentDto);
+        log.info("Update Existing Department : {} ", departmentDto);
         final Department department = departmentService.update(mapper.map(departmentDto));
         return new ApiResponse<>(HttpStatus.OK.value(), mapper.map(department));
     }

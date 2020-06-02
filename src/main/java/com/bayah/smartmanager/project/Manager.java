@@ -1,11 +1,20 @@
 package com.bayah.smartmanager.project;
 
 import com.bayah.smartmanager.common.BaseEntity;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "managers")
+@Table(name = "managers", indexes = {@Index(name = "indx_manager", columnList = "msisdn", unique = true)})
+@Getter
+@Setter
+@ToString
+@Access(AccessType.FIELD)
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Manager extends BaseEntity {
 
     @Column(name="first_name", nullable = false, length = 45)
@@ -17,15 +26,8 @@ public class Manager extends BaseEntity {
     @Column(name = "id_number", unique = true, nullable = false, length = 10)
     private String idNumber;
 
-    @Column(name="contact_number", unique = true, nullable = false, length = 12)
-    private String contactNumber;
+    @Column(name="msisdn", unique = true, nullable = false, length = 12)
+    private String msisdn;
 
-    @Column(name="location", length = 45)
-    private String location;
 
-    @Column(name = "province", nullable = false, length = 45)
-    private String province;
-
-    @Column(name = "district", nullable = false, length = 45)
-    private String district;
 }

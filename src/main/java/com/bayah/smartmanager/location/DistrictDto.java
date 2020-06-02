@@ -9,4 +9,5 @@ import java.io.Serializable;
 public class DistrictDto extends BaseDto implements Serializable {
   private String name;
   private int totalWards;
+  private Long province_id;
 }

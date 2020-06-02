@@ -10,6 +10,14 @@ import com.bayah.smartmanager.location.District;
 import com.bayah.smartmanager.location.DistrictDto;
 import com.bayah.smartmanager.location.Province;
 import com.bayah.smartmanager.location.ProvinceDto;
+import com.bayah.smartmanager.merchant.Supplier;
+import com.bayah.smartmanager.merchant.SupplierDto;
+import com.bayah.smartmanager.product.Product;
+import com.bayah.smartmanager.product.ProductDto;
+import com.bayah.smartmanager.project.Manager;
+import com.bayah.smartmanager.project.ManagerDto;
+import com.bayah.smartmanager.sponsor.Sponsor;
+import com.bayah.smartmanager.sponsor.SponsorDto;
 import org.mapstruct.Mapper;
 
 
@@ -36,5 +44,21 @@ public interface TypeMapper {
     ProjectInputs map(ProjectInputsDto projectInputsDto);
 
     ProjectInputsDto map(ProjectInputs projectInputs);
+
+    Supplier map(SupplierDto supplierDto);
+
+    SupplierDto map(Supplier supplier);
+
+    Product map(ProductDto productDto);
+
+    ProductDto map(Product product);
+
+    Sponsor map(SponsorDto sponsorDto);
+
+    SponsorDto map(Sponsor sponsor);
+
+    Manager map(ManagerDto managerDto);
+
+    ManagerDto map(Manager manager);
 }
 
