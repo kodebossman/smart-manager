@@ -8,7 +8,7 @@ public class SmartManagerApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SmartManagerApplication.class, args);
-		System.out.println(4);
+		System.out.println("The App is now up and running!!!");
 	}
 
 }
