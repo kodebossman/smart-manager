@@ -56,6 +56,7 @@ public class DepartmentAPI implements CrudApi<DepartmentDto> {
     }
 
     @Override
+    @GetMapping(value = "/findAll")
     public ApiResponse<PaginationResult<DepartmentDto>> findAll(String search, Integer page, Integer size, String sortBy) {
         List<DepartmentDto> departmentDtos = departmentService.findAll(PageRequest.of(page - 1, size, Sort.by(sortBy)))
                 .stream()
